@@ -8,6 +8,7 @@ target 'WIKIapp' do
   # Pods for WIKIapp
   pod 'Alamofire', '~> 5.0.0-rc.3'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'lottie-ios'
 
   target 'WIKIappTests' do
     inherit! :search_paths

@@ -15,6 +15,9 @@
 		0FEEE77F23EE734D00208CF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FEEE77D23EE734D00208CF4 /* LaunchScreen.storyboard */; };
 		0FEEE78A23EE734D00208CF4 /* WIKIappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEEE78923EE734D00208CF4 /* WIKIappTests.swift */; };
 		0FEEE79523EE734D00208CF4 /* WIKIappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEEE79423EE734D00208CF4 /* WIKIappUITests.swift */; };
+		0FEEE7AF23EE84D300208CF4 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEEE7AE23EE84D300208CF4 /* Util.swift */; };
+		0FEEE7B323EE8B1300208CF4 /* WikiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEEE7B223EE8B1300208CF4 /* WikiModel.swift */; };
+		0FEEE7B523EE94B500208CF4 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEEE7B423EE94B500208CF4 /* ApiService.swift */; };
 		8EA120B382960C3C8F652EDC /* Pods_WIKIapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F191094E3329763E2E67FFF /* Pods_WIKIapp.framework */; };
 		D02A1F123A5BABD38330DFA0 /* Pods_WIKIappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A65277C094DA65E3FF0BC4C /* Pods_WIKIappTests.framework */; };
 		F89C8F389F32A5462FD5ACE6 /* Pods_WIKIappUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7C76F05548B4B4F32049FAD /* Pods_WIKIappUITests.framework */; };
@@ -53,6 +56,9 @@
 		0FEEE79023EE734D00208CF4 /* WIKIappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WIKIappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FEEE79423EE734D00208CF4 /* WIKIappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WIKIappUITests.swift; sourceTree = "<group>"; };
 		0FEEE79623EE734D00208CF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FEEE7AE23EE84D300208CF4 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		0FEEE7B223EE8B1300208CF4 /* WikiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiModel.swift; sourceTree = "<group>"; };
+		0FEEE7B423EE94B500208CF4 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		10B2338844CB2076CF3B246D /* Pods-WIKIapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WIKIapp.debug.xcconfig"; path = "Target Support Files/Pods-WIKIapp/Pods-WIKIapp.debug.xcconfig"; sourceTree = "<group>"; };
 		113309ACF31570639148EC30 /* Pods-WIKIappUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WIKIappUITests.release.xcconfig"; path = "Target Support Files/Pods-WIKIappUITests/Pods-WIKIappUITests.release.xcconfig"; sourceTree = "<group>"; };
 		282946529289127712DF61AA /* Pods-WIKIapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WIKIapp.release.xcconfig"; path = "Target Support Files/Pods-WIKIapp/Pods-WIKIapp.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,13 +122,15 @@
 		0FEEE77023EE734C00208CF4 /* WIKIapp */ = {
 			isa = PBXGroup;
 			children = (
+				0FEEE7AD23EE84B300208CF4 /* DataModels */,
+				0FEEE7AC23EE84A700208CF4 /* Utils */,
+				0FEEE7AB23EE849D00208CF4 /* ViewControllers */,
+				0FEEE7AA23EE848E00208CF4 /* StoryBoards */,
+				0FEEE7A923EE848A00208CF4 /* Models */,
+				0FEEE7A823EE848500208CF4 /* Services */,
 				0FEEE77123EE734C00208CF4 /* AppDelegate.swift */,
-				0FEEE77323EE734C00208CF4 /* ViewController.swift */,
-				0FEEE77523EE734C00208CF4 /* Main.storyboard */,
 				0FEEE77B23EE734D00208CF4 /* Assets.xcassets */,
-				0FEEE77D23EE734D00208CF4 /* LaunchScreen.storyboard */,
 				0FEEE78023EE734D00208CF4 /* Info.plist */,
-				0FEEE77823EE734C00208CF4 /* WIKIapp.xcdatamodeld */,
 			);
 			path = WIKIapp;
 			sourceTree = "<group>";
@@ -145,6 +153,55 @@
 			path = WIKIappUITests;
 			sourceTree = "<group>";
 		};
+		0FEEE7A823EE848500208CF4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0FEEE7B423EE94B500208CF4 /* ApiService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0FEEE7A923EE848A00208CF4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0FEEE7B223EE8B1300208CF4 /* WikiModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0FEEE7AA23EE848E00208CF4 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				0FEEE77D23EE734D00208CF4 /* LaunchScreen.storyboard */,
+				0FEEE77523EE734C00208CF4 /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		0FEEE7AB23EE849D00208CF4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0FEEE77323EE734C00208CF4 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0FEEE7AC23EE84A700208CF4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0FEEE7AE23EE84D300208CF4 /* Util.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		0FEEE7AD23EE84B300208CF4 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				0FEEE77823EE734C00208CF4 /* WIKIapp.xcdatamodeld */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
 		26F5156467C78946EEBF9178 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +212,6 @@
 				63907375030903B413F4ED76 /* Pods-WIKIappUITests.debug.xcconfig */,
 				113309ACF31570639148EC30 /* Pods-WIKIappUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -355,6 +411,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-WIKIapp/Pods-WIKIapp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -362,6 +419,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -399,7 +457,10 @@
 			files = (
 				0FEEE77423EE734C00208CF4 /* ViewController.swift in Sources */,
 				0FEEE77A23EE734C00208CF4 /* WIKIapp.xcdatamodeld in Sources */,
+				0FEEE7B523EE94B500208CF4 /* ApiService.swift in Sources */,
 				0FEEE77223EE734C00208CF4 /* AppDelegate.swift in Sources */,
+				0FEEE7B323EE8B1300208CF4 /* WikiModel.swift in Sources */,
+				0FEEE7AF23EE84D300208CF4 /* Util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,6 +639,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KG2AF9T859;
 				INFOPLIST_FILE = WIKIapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -597,6 +659,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KG2AF9T859;
 				INFOPLIST_FILE = WIKIapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
